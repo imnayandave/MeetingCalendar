@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Qj-aY-ejS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="demo_MeetingCalendar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="paY-6S-pYy">
+                                <rect key="frame" x="103" y="390" width="208" height="116"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBn-1d-aHe">
+                                        <rect key="frame" x="0.0" y="0.0" width="208" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Go To Calendar"/>
+                                        <connections>
+                                            <action selector="btn_GoToCalendar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="129-pG-hNr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSg-JB-XNu">
+                                        <rect key="frame" x="25.5" y="68" width="157" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Select Date"/>
+                                        <connections>
+                                            <action selector="btnSelectDate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="occ-Wg-T1v"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7L-cD-sUL">
+                                <rect key="frame" x="20" y="516" width="374" height="261"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="n2f-lJ-Huv">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="216"/>
+                                        <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                            <!--1970-01-01 11:00:00 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THa-8f-WJM">
+                                        <rect key="frame" x="0.0" y="221" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ARU-6W-5FD"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                        <connections>
+                                            <action selector="btnDonePickerSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XPb-DX-IOg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="n2f-lJ-Huv" secondAttribute="trailing" id="5uz-pw-IkB"/>
+                                    <constraint firstAttribute="bottom" secondItem="THa-8f-WJM" secondAttribute="bottom" id="Pnr-e4-vpi"/>
+                                    <constraint firstItem="THa-8f-WJM" firstAttribute="top" secondItem="n2f-lJ-Huv" secondAttribute="bottom" constant="5" id="Unr-8z-H4V"/>
+                                    <constraint firstAttribute="trailing" secondItem="THa-8f-WJM" secondAttribute="trailing" id="Wsq-cn-rur"/>
+                                    <constraint firstItem="THa-8f-WJM" firstAttribute="leading" secondItem="J7L-cD-sUL" secondAttribute="leading" id="b0q-7g-05k"/>
+                                    <constraint firstItem="n2f-lJ-Huv" firstAttribute="top" secondItem="J7L-cD-sUL" secondAttribute="top" id="nAU-Zt-PBq"/>
+                                    <constraint firstItem="n2f-lJ-Huv" firstAttribute="leading" secondItem="J7L-cD-sUL" secondAttribute="leading" id="wUH-kJ-nI6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="paY-6S-pYy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1mp-GX-RuL"/>
+                            <constraint firstItem="J7L-cD-sUL" firstAttribute="top" secondItem="eSg-JB-XNu" secondAttribute="bottom" constant="10" id="O0B-QY-ihd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J7L-cD-sUL" secondAttribute="trailing" constant="20" id="Tlu-JD-8yk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="J7L-cD-sUL" secondAttribute="bottom" id="Wki-bQ-yyy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="J7L-cD-sUL" secondAttribute="leading" constant="-20" id="YaZ-wI-ObC"/>
+                            <constraint firstItem="paY-6S-pYy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vhN-jd-QKP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="APf-f6-wzt"/>
+                    <connections>
+                        <outlet property="pickerContainerView" destination="J7L-cD-sUL" id="Jce-C1-Hk9"/>
+                        <outlet property="pickerView" destination="n2f-lJ-Huv" id="lki-V1-qRj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1046.376811594203" y="3.3482142857142856"/>
+        </scene>
+        <!--Main CalendarVC-->
+        <scene sceneID="Dhw-nh-u8J">
+            <objects>
+                <viewController storyboardIdentifier="MainCalendar_VC" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2en-bo-bGV" customClass="MainCalendar_VC" customModule="demo_MeetingCalendar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9VE-bR-eqo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="l53-hi-osy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gE-lj-3wC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1988" y="3"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="V6P-B1-DD0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Qj-aY-ejS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PzH-a6-kt0">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jBu-nR-3Gq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1A-od-ZSK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="3.3482142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
